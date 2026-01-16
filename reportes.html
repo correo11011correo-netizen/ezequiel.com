@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reportar Problemas</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/comentarios.js" defer></script>
+</head>
+<body>
+  <h1>Reportar Problemas</h1>
+  <form id="form-reporte">
+    <label>Localidad:
+      <select id="localidad">
+        <option>Posadas</option>
+        <option>Oberá</option>
+        <option>Eldorado</option>
+      </select>
+    </label>
+    <label>Tipo de problema:
+      <select id="tipo">
+        <option>Luz</option>
+        <option>Agua</option>
+        <option>Gas</option>
+        <option>Otro</option>
+      </select>
+    </label>
+    <label>Descripción:
+      <textarea id="descripcion"></textarea>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <h2>Reportes recientes</h2>
+  <div id="lista-reportes"></div>
+</body>
+</html>
