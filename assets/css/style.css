@@ -3,27 +3,34 @@
   position: fixed;
   top: 15px;
   left: 15px;
-  background: var(--color-primario);
+  background: var(--color-secundario);
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 18px;
   font-size: 1.2em;
   cursor: pointer;
   z-index: 1000;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+.menu-toggle:hover {
+  background: #16a085;
 }
 
-/* Sidebar */
+/* Sidebar moderno */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* oculto */
-  width: 250px;
+  left: -280px; /* oculto */
+  width: 280px;
   height: 100%;
   background: var(--color-primario);
   color: white;
   transition: left 0.3s ease;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -35,17 +42,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .sidebar nav a {
-  display: block;
   color: white;
   text-decoration: none;
-  padding: 10px 0;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
+
 .sidebar nav a:hover {
-  color: var(--color-secundario);
+  background: var(--color-secundario);
+  color: white;
 }
 
 /* Responsive ajustes */
