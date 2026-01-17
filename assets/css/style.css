@@ -1,184 +1,110 @@
-/* 🎨 Variables institucionales */
 :root {
-  --color-primario: #006400;   /* Verde institucional */
-  --color-secundario: #FFD700; /* Dorado */
-  --color-fondo: #f5f5f5;
+  --color-primario: #2C3E50;   /* gris azulado */
+  --color-secundario: #1ABC9C; /* verde menta */
+  --color-fondo: #ECF0F1;
   --color-texto: #333;
-  --color-claro: #ffffff;
-  --color-sombra: rgba(0, 0, 0, 0.1);
+  --color-resaltado: #E67E22;  /* naranja suave */
 }
 
-/* 🔤 Tipografía base */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background: var(--color-fondo);
   color: var(--color-texto);
 }
 
-/* 🧭 Encabezado institucional */
+/* Header */
 header {
   background: var(--color-primario);
-  color: var(--color-claro);
+  color: white;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
 .logo img {
   height: 60px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8em;
-  letter-spacing: 1px;
-}
-
-nav {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  width: auto;
 }
 
 nav a {
-  color: var(--color-claro);
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
-  text-decoration: underline;
+  color: var(--color-secundario);
 }
 
-/* 🏛️ Banner principal */
+/* Banner */
 .banner {
   background: var(--color-secundario);
-  color: #333;
+  color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
-
 .banner h2 {
-  margin: 0;
-  font-size: 2em;
+  font-size: 2.2em;
 }
-
 .banner p {
   font-size: 1.2em;
 }
 
-/* 📦 Contenido principal */
-main, section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: var(--color-claro);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px var(--color-sombra);
-}
-
-/* 🧭 Accesos rápidos */
-.accesos {
-  margin-top: 40px;
-}
-
+/* Tarjetas modernas */
 .cards {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
 }
-
 .card {
-  background: var(--color-claro);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px var(--color-sombra);
-  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
   width: 280px;
   text-align: center;
+  transition: transform 0.2s ease;
 }
-
+.card:hover {
+  transform: translateY(-5px);
+}
 .card h3 {
   color: var(--color-primario);
-  margin-top: 0;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 0.95em;
+  color: #555;
+}
+.card .emoji {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
+/* Botones */
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: var(--color-primario);
-  color: var(--color-claro);
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--color-resaltado);
+  color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
 }
-
 .btn:hover {
-  background: #004d00;
+  background: #d35400;
 }
 
-/* 📝 Formularios */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-label {
-  font-weight: bold;
-}
-
-select, textarea, input, button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-button {
-  background: var(--color-primario);
-  color: var(--color-claro);
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #004d00;
-}
-
-/* 📅 Listados de eventos y reportes */
-#lista-eventos p,
-#lista-reportes p {
-  background: #eef;
-  padding: 10px;
-  border-radius: 6px;
-  margin: 8px 0;
-  border-left: 4px solid var(--color-primario);
-}
-
-/* 🧾 Footer institucional */
+/* Footer */
 footer {
   background: var(--color-primario);
-  color: var(--color-claro);
+  color: white;
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  font-size: 0.9em;
 }
