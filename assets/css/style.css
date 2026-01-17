@@ -18,7 +18,7 @@
   background: #16a085;
 }
 
-/* Sidebar moderno */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -78,7 +78,7 @@
   color: white;
 }
 
-/* Responsive ajustes */
+/* Responsive */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
