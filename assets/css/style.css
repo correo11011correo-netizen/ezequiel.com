@@ -1,6 +1,4 @@
-/* =========================
-   CONFIGURACIÓN BASE
-   ========================= */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -22,13 +20,11 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* Header */
 header {
   background: var(--color-primario);
   color: white;
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,13 +37,26 @@ header {
 }
 
 .logo img {
-  height: 60px;
-  width: auto;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.logo h1 {
+  font-size: 1.4em;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .top-nav a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -55,9 +64,89 @@ header {
   color: var(--color-secundario);
 }
 
-/* =========================
-   BANNER
-   ========================= */
+.menu-toggle {
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.menu-toggle:hover {
+  background: #16a085;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 320px;
+  height: 100%;
+  background: var(--color-primario);
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.4em;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav h3 {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: var(--color-secundario);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 5px;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease, padding-left 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  background: var(--color-secundario);
+  padding-left: 15px;
+}
+
+/* Banner */
 .banner {
   background: var(--color-secundario);
   color: white;
@@ -71,9 +160,7 @@ header {
   font-size: 1.2em;
 }
 
-/* =========================
-   TARJETAS
-   ========================= */
+/* Cards */
 .cards {
   display: flex;
   gap: 20px;
@@ -107,9 +194,7 @@ header {
   margin-bottom: 10px;
 }
 
-/* =========================
-   BOTONES
-   ========================= */
+/* Botones */
 .btn {
   display: inline-block;
   margin-top: 15px;
@@ -124,9 +209,7 @@ header {
   background: #d35400;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Footer */
 footer {
   background: var(--color-primario);
   color: white;
@@ -135,215 +218,73 @@ footer {
   margin-top: 40px;
 }
 
-/* =========================
-   SIDEBAR
-   ========================= */
-.menu-toggle {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: var(--color-secundario);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  font-size: 1.2em;
-  cursor: pointer;
-  z-index: 1100;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.menu-toggle:hover {
-  background: #16a085;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px; /* oculto */
-  width: 300px;
-  height: 100%;
-  background: var(--color-primario);
-  color: white;
-  transition: left 0.3s ease;
-  z-index: 1050;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.sidebar.active {
-  left: 0; /* visible */
-}
+  .logo h1 {
+    font-size: 1.2em;
+    margin-top: 8px;
+  }
 
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
 
-.sidebar-header h2 {
-  font-size: 1.4em;
-  margin: 0;
-}
+  .top-nav a {
+    font-size: 1em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    width: 100%;
+    max-width: 200px;
+  }
 
-.close-btn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.4em;
-  cursor: pointer;
-}
+  .menu-toggle {
+    margin-top: 10px;
+    font-size: 1.4em;
+    background: var(--color-secundario);
+    padding: 8px 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
 
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
 
-.sidebar nav h3 {
-  margin-top: 20px;
-  font-size: 1.1em;
-  color: var(--color-secundario);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 5px;
-}
+  .sidebar.active {
+    left: 0;
+  }
 
-.sidebar nav a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
+  .sidebar nav a {
+    font-size: 1.1em;
+    padding: 12px;
+  }
 
-.sidebar nav a:hover {
-  background: var(--color-secundario);
-  color: white;
-}
+  .banner h2 {
+    font-size: 1.6em;
+  }
 
-/* =========================
-   EVENTOS
-   ========================= */
-.eventos {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-}
-.evento-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease;
-}
-.evento-card:hover {
-  transform: translateY(-3px);
-}
-.evento-card h3 {
-  color: var(--color-primario);
-  margin-bottom: 10px;
-}
-.evento-card p {
-  color: #555;
-  font-size: 0.95em;
-}
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* =========================
-   REPORTES
-   ========================= */
-form.reportes {
-  max-width: 600px;
-  margin: 40px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  .card {
+    width: 90%;
+  }
 }
-form.reportes label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: var(--color-primario);
-}
-form.reportes input,
-form.reportes textarea,
-form.reportes select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
-}
-form.reportes button {
-  background: var(--color-resaltado);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-form.reportes button:hover {
-  background: #d35400;
-}
-
-/* =========================
-   CONTACTO
-   ========================= */
-.contacto {
-  max-width: 600px;
-  margin: 40px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.contacto h2 {
-  color: var(--color-primario);
-  margin-bottom: 20px;
-}
-.contacto input,
-.contacto textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-.contacto button {
-  background: var(--color-secundario);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.contacto button:hover {
-  background: #16a085;
-}
-
-/* =========================
-   ADMINISTRATIVA
-   ========================= */
-.administrativa {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-}
-.administrativa h2 {
-  color: var(--color-primario);
-  margin-bottom: 20px;
-}
-.administrativa table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.ad
