@@ -1,10 +1,65 @@
-/* Logo y encabezado */
+/* 🎨 Variables institucionales */
+:root {
+  --color-primario: #006400;   /* Verde institucional */
+  --color-secundario: #FFD700; /* Dorado */
+  --color-fondo: #f5f5f5;
+  --color-texto: #333;
+  --color-claro: #ffffff;
+  --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* 🔤 Tipografía base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* 🧭 Encabezado institucional */
+header {
+  background: var(--color-primario);
+  color: var(--color-claro);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+.logo img {
+  height: 60px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--color-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🏛️ Banner principal */
 .banner {
   background: var(--color-secundario);
   color: #333;
@@ -21,7 +76,17 @@
   font-size: 1.2em;
 }
 
-/* Accesos rápidos */
+/* 📦 Contenido principal */
+main, section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: var(--color-claro);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--color-sombra);
+}
+
+/* 🧭 Accesos rápidos */
 .accesos {
   margin-top: 40px;
 }
@@ -34,16 +99,17 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--color-claro);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px var(--color-sombra);
   padding: 20px;
-  width: 250px;
+  width: 280px;
   text-align: center;
 }
 
 .card h3 {
   color: var(--color-primario);
+  margin-top: 0;
 }
 
 .btn {
@@ -51,7 +117,7 @@
   margin-top: 10px;
   padding: 10px 15px;
   background: var(--color-primario);
-  color: white;
+  color: var(--color-claro);
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -59,4 +125,60 @@
 
 .btn:hover {
   background: #004d00;
+}
+
+/* 📝 Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select, textarea, input, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background: var(--color-primario);
+  color: var(--color-claro);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #004d00;
+}
+
+/* 📅 Listados de eventos y reportes */
+#lista-eventos p,
+#lista-reportes p {
+  background: #eef;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 4px solid var(--color-primario);
+}
+
+/* 🧾 Footer institucional */
+footer {
+  background: var(--color-primario);
+  color: var(--color-claro);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
 }
