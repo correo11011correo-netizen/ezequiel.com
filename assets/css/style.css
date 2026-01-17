@@ -1,4 +1,121 @@
-/* Botón menú */
+:root {
+  --color-primario: #2C3E50;   /* gris azulado sobrio */
+  --color-secundario: #1ABC9C; /* verde menta moderno */
+  --color-fondo: #ECF0F1;      /* gris claro */
+  --color-texto: #333;         /* texto principal */
+  --color-resaltado: #E67E22;  /* naranja suave para botones */
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* Header */
+header {
+  background: var(--color-primario);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.top-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.top-nav a:hover {
+  color: var(--color-secundario);
+}
+
+/* Banner */
+.banner {
+  background: var(--color-secundario);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+.banner h2 {
+  font-size: 2.2em;
+}
+.banner p {
+  font-size: 1.2em;
+}
+
+/* Tarjetas */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h3 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 0.95em;
+  color: #555;
+}
+.card .emoji {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--color-resaltado);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #d35400;
+}
+
+/* Footer */
+footer {
+  background: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Botón menú lateral */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -17,7 +134,7 @@
   background: #16a085;
 }
 
-/* Sidebar overlay */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -79,12 +196,18 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .top-nav {
+    margin-top: 10px;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
   }
-  header {
-    flex-direction: column;
-    text-align: center;
+  .banner h2 {
+    font-size: 1.6em;
   }
 }
