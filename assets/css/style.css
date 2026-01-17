@@ -23,6 +23,12 @@ header {
   justify-content: space-between;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .logo img {
   height: 60px;
   width: auto;
