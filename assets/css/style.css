@@ -1,34 +1,33 @@
 /* Botón menú */
 .menu-toggle {
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
   background: var(--color-secundario);
   color: white;
   border: none;
-  padding: 12px 18px;
+  padding: 10px 14px;
   font-size: 1.2em;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1100;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
 }
 .menu-toggle:hover {
   background: #16a085;
 }
 
-/* Sidebar */
+/* Sidebar overlay */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -280px; /* oculto */
-  width: 280px;
+  left: -300px; /* oculto */
+  width: 300px;
   height: 100%;
   background: var(--color-primario);
   color: white;
   transition: left 0.3s ease;
-  z-index: 999;
+  z-index: 1050;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -80,15 +79,12 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .top-nav {
-    margin-top: 10px;
-  }
   .cards {
     flex-direction: column;
     align-items: center;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
   }
 }
