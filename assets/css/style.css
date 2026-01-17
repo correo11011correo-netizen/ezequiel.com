@@ -1,9 +1,9 @@
 :root {
-  --color-primario: #2C3E50;   /* gris azulado sobrio */
-  --color-secundario: #1ABC9C; /* verde menta moderno */
+  --color-primario: #2C3E50;   /* gris azulado */
+  --color-secundario: #1ABC9C; /* verde menta */
   --color-fondo: #ECF0F1;      /* gris claro */
-  --color-texto: #333;         /* texto principal */
-  --color-resaltado: #E67E22;  /* naranja suave para botones */
+  --color-texto: #333;
+  --color-resaltado: #E67E22;  /* naranja suave */
 }
 
 body {
@@ -52,7 +52,7 @@ header {
   padding: 50px 20px;
 }
 .banner h2 {
-  font-size: 2.2em;
+  font-size: 2em;
 }
 .banner p {
   font-size: 1.2em;
@@ -64,7 +64,8 @@ header {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
+  margin: 30px auto;
+  max-width: 1000px;
 }
 .card {
   background: white;
@@ -115,85 +116,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Botón menú lateral */
-.menu-toggle {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: var(--color-secundario);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  font-size: 1.2em;
-  cursor: pointer;
-  z-index: 1100;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.menu-toggle:hover {
-  background: #16a085;
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px; /* oculto */
-  width: 300px;
-  height: 100%;
-  background: var(--color-primario);
-  color: white;
-  transition: left 0.3s ease;
-  z-index: 1050;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.sidebar.active {
-  left: 0; /* visible */
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.sidebar-header h2 {
-  font-size: 1.4em;
-  margin: 0;
-}
-
-.close-btn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.4em;
-  cursor: pointer;
-}
-
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.sidebar nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.sidebar nav a:hover {
-  background: var(--color-secundario);
-  color: white;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   header {
@@ -206,8 +128,5 @@ footer {
   .cards {
     flex-direction: column;
     align-items: center;
-  }
-  .banner h2 {
-    font-size: 1.6em;
   }
 }
