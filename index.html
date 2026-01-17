@@ -4,18 +4,32 @@
   <meta charset="UTF-8">
   <title>Gobierno de Misiones - Portal Oficial</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Fuente moderna desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
 </head>
 <body>
+  <!-- Botón para abrir menú lateral -->
+  <button class="menu-toggle">☰ Menú</button>
+
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Secciones</h2>
+      <button class="close-btn">✖</button>
+    </div>
+    <nav>
+      <a href="administrativa.html">📑 Administrativa del Diputado</a>
+      <a href="index.html">👥 Participación Ciudadana</a>
+    </nav>
+  </aside>
+
   <!-- Encabezado institucional -->
   <header>
     <div class="logo">
       <img src="assets/img/escudo.png" alt="Escudo de Misiones">
       <h1>Gobierno de la Provincia de Misiones</h1>
     </div>
-    <nav>
-      <a href="index.html">Inicio</a>
+    <nav class="top-nav">
       <a href="eventos.html">Calendario</a>
       <a href="reportes.html">Reportar Problemas</a>
       <a href="contacto.html">Contacto</a>
@@ -28,17 +42,15 @@
     <p>Acceda a información oficial, próximos eventos y canales de comunicación con el gobierno provincial.</p>
   </section>
 
-  <!-- Sección de bienvenida -->
+  <!-- Contenido principal -->
   <main>
     <section>
       <h2>Bienvenidos</h2>
       <p>
         Este portal es el espacio oficial del Gobierno de Misiones para la gestión administrativa y la interacción con los ciudadanos.
-        Aquí podrá consultar el calendario de actividades del gobernador, reportar problemas cotidianos en su localidad y dejar recomendaciones.
       </p>
     </section>
 
-    <!-- Sección destacada de accesos rápidos -->
     <section class="accesos">
       <h2>Accesos Rápidos</h2>
       <div class="cards">
@@ -62,20 +74,14 @@
         </div>
       </div>
     </section>
-
-    <!-- Sección informativa adicional -->
-    <section>
-      <h2>Noticias y Comunicados</h2>
-      <p>📰 Manténgase informado sobre las últimas decisiones administrativas, obras públicas y programas sociales.</p>
-      <p>🌱 Descubra iniciativas de desarrollo sostenible y proyectos comunitarios en cada localidad.</p>
-      <p>🤝 Participe en consultas ciudadanas y deje sus recomendaciones para mejorar la gestión provincial.</p>
-    </section>
   </main>
 
-  <!-- Footer institucional -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 Gobierno de la Provincia de Misiones</p>
-    <p>Portal oficial de administración y participación ciudadana</p>
   </footer>
+
+  <!-- Script para menú lateral -->
+  <script src="assets/js/sidebar.js"></script>
 </body>
 </html>
