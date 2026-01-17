@@ -2,35 +2,43 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Reportar Problemas</title>
+  <title>Reportar Problemas - Gobierno de Misiones</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/comentarios.js" defer></script>
 </head>
 <body>
-  <h1>Reportar Problemas</h1>
-  <form id="form-reporte">
-    <label>Localidad:
-      <select id="localidad">
-        <option>Posadas</option>
-        <option>Oberá</option>
-        <option>Eldorado</option>
-      </select>
-    </label>
-    <label>Tipo de problema:
-      <select id="tipo">
-        <option>Luz</option>
-        <option>Agua</option>
-        <option>Gas</option>
-        <option>Otro</option>
-      </select>
-    </label>
-    <label>Descripción:
-      <textarea id="descripcion"></textarea>
-    </label>
-    <button type="submit">Enviar</button>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/escudo.png" alt="Escudo"></a>
+      <h1>Reportar Problemas</h1>
+    </div>
+  </header>
+
+  <form class="reportes">
+    <h2>Formulario de Reclamos</h2>
+
+    <label for="categoria">Categoría del problema</label>
+    <select id="categoria" name="categoria">
+      <option value="">Seleccione una opción...</option>
+      <option value="servicios">Servicios Públicos</option>
+      <option value="infraestructura">Infraestructura</option>
+      <option value="salud">Salud</option>
+      <option value="educacion">Educación</option>
+    </select>
+
+    <label for="descripcion">Descripción detallada</label>
+    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Explique claramente el problema..."></textarea>
+
+    <label for="ubicacion">Ubicación</label>
+    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ejemplo: Calle San Martín 123, Posadas">
+
+    <label for="contacto">Datos de contacto</label>
+    <input type="text" id="contacto" name="contacto" placeholder="Teléfono o correo electrónico">
+
+    <button type="submit">Enviar Reclamo</button>
   </form>
 
-  <h2>Reportes recientes</h2>
-  <div id="lista-reportes"></div>
+  <footer>
+    <p>&copy; 2026 Gobierno de la Provincia de Misiones</p>
+  </footer>
 </body>
 </html>
