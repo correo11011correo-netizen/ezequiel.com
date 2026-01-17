@@ -218,7 +218,172 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive */
+/* =========================
+   EVENTOS
+   ========================= */
+.eventos {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.eventos h2 {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+.evento-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+.evento-card:hover {
+  transform: translateY(-3px);
+}
+.evento-card h3 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
+.evento-card p {
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* =========================
+   REPORTES
+   ========================= */
+form.reportes {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+form.reportes h2 {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+form.reportes label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--color-primario);
+}
+form.reportes input,
+form.reportes textarea,
+form.reportes select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+form.reportes textarea {
+  resize: vertical;
+}
+form.reportes button {
+  background: var(--color-resaltado);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+form.reportes button:hover {
+  background: #d35400;
+}
+/* =========================
+   CONTACTO
+   ========================= */
+.contacto {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contacto h2 {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.contacto button {
+  background: var(--color-secundario);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.contacto button:hover {
+  background: #16a085;
+}
+
+/* =========================
+   ADMINISTRATIVA
+   ========================= */
+.administrativa {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.administrativa h2 {
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+.administrativa table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.administrativa th,
+.administrativa td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.administrativa th {
+  background: var(--color-secundario);
+  color: white;
+}
+.administrativa tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.administrativa a {
+  color: var(--color-resaltado);
+  text-decoration: none;
+  font-weight: bold;
+}
+.administrativa a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px) {
+  .cards {
+    justify-content: center;
+  }
+  .card {
+    width: 45%; /* dos tarjetas por fila en tablets */
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -286,5 +451,24 @@ footer {
 
   .card {
     width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 40px;
+  }
+  .logo h1 {
+    font-size: 1em;
+  }
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9em;
+  }
+  .banner h2 {
+    font-size: 1.4em;
+  }
+  .banner p {
+    font-size: 0.9em;
   }
 }
